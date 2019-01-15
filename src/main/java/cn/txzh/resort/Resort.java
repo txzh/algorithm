@@ -59,7 +59,7 @@ public class Resort {
     }
 
     /**
-     *  改进以保证元素元素的顺序
+     *  改进以保证元素原来的顺序
      * @param list 待排序列表
      * @param distance 间隔距离
      * @param debug 打印调试日志
