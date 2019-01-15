@@ -27,7 +27,7 @@ public class ResortTest {
 
         House house3 = new House();
         house3.setHouseId(3);
-        house3.setType(2);
+        house3.setType(1);
         house3.setHouseName("房屋3");
         houses.add(house3);
 
@@ -63,7 +63,7 @@ public class ResortTest {
 
         House house9 = new House();
         house9.setHouseId(9);
-        house9.setType(1);
+        house9.setType(5);
         house9.setHouseName("房屋9");
         houses.add(house9);
 
@@ -73,14 +73,35 @@ public class ResortTest {
         house10.setHouseName("房屋10");
         houses.add(house10);
 
+        House house11 = new House();
+        house11.setHouseId(11);
+        house11.setType(5);
+        house11.setHouseName("房屋11");
+        houses.add(house11);
+
+        House house12 = new House();
+        house12.setHouseId(12);
+        house12.setType(12);
+        house12.setHouseName("房屋12");
+        houses.add(house12);
+
         System.out.println("----- 重排序之前 -------");
         for (House house : houses) {
             System.out.println(house);
         }
 
-        List<ResortElement> resortElements = new ArrayList<ResortElement>();
+       /* List<ResortElement> resortElements = new ArrayList<ResortElement>();
         resortElements.addAll(houses);
         Resort.reSort(resortElements, 3);
+        System.out.println("----- 重排序之后 -------");
+
+        for (ResortElement resortElement : resortElements) {
+            System.out.println(resortElement);
+        }*/
+
+        List<ResortElement> resortElements = new ArrayList<ResortElement>();
+        resortElements.addAll(houses);
+        Resort.reSort2(resortElements, 3, true);
         System.out.println("----- 重排序之后 -------");
 
         for (ResortElement resortElement : resortElements) {
