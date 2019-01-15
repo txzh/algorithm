@@ -58,6 +58,12 @@ public class Resort {
         }
     }
 
+    /**
+     *  改进以保证元素元素的顺序
+     * @param list 待排序列表
+     * @param distance 间隔距离
+     * @param debug 打印调试日志
+     */
     public static void reSort2(List<ResortElement> list, int distance, boolean debug) {
         if (CollectionUtils.isEmpty(list) || distance < 1) {
             return;
@@ -101,7 +107,7 @@ public class Resort {
 
                 if (tempIndex < size) {//将index到tempIndex之间的房屋移动到tempIndex之下，而不是交换index和tempIndex
 //                    Collections.swap(list, index, tempIndex);
-                    if (index == size - 2) {
+                    if (index == size - 2) {//如果是倒数第二个元素，则直接交换最后两个元素的位置
                         Collections.swap(list, index, index + 1);
                     } else {
                         list.set(index, list.get(tempIndex));
